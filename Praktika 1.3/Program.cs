@@ -4,16 +4,16 @@ class PalindromeChecker
 {
     static void Main(string[] args)
     {
-        Console.Write("Введите строку: ");
-        string input = Console.ReadLine();
+        Console.Write("Введите строку: "); // Приглашение пользователя ввести строку
+        string input = Console.ReadLine(); // Считываем введенную пользователем строку
 
         if (IsPalindrome(input))
         {
-            Console.WriteLine("Это палиндром.");
+            Console.WriteLine("Это палиндром."); // Выводим сообщение, если строка является палиндромом
         }
         else
         {
-            Console.WriteLine("Это не палиндром.");
+            Console.WriteLine("Это не палиндром."); // Выводим сообщение, если строка не является палиндромом
         }
     }
 

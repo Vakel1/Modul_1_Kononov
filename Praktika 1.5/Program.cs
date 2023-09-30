@@ -22,12 +22,12 @@ class NumberGuessingGame
             if (guess == secretNumber)
             {
                 Console.WriteLine("Поздравляем! Вы угадали число.");
-                break;
+                break; // Если число угадано, завершаем игру
             }
             else
             {
                 Console.WriteLine("Неверно. Попробуйте снова.");
-                attempts--;
+                attempts--; // Уменьшаем количество оставшихся попыток
             }
         }
 
