@@ -17,17 +17,24 @@ class NumberGuessingGame
         while (attempts > 0)
         {
             Console.Write($"Осталось попыток: {attempts}. Введите вашу догадку: ");
-            int guess = int.Parse(Console.ReadLine());
 
-            if (guess == secretNumber)
+            int guess;
+            if (int.TryParse(Console.ReadLine(), out guess))
             {
-                Console.WriteLine("Поздравляем! Вы угадали число.");
-                break; // Если число угадано, завершаем игру
+                if (guess == secretNumber)
+                {
+                    Console.WriteLine("Поздравляем! Вы угадали число.");
+                    break; // Если число угадано, завершаем игру
+                }
+                else
+                {
+                    Console.WriteLine("Неверно. Попробуйте снова.");
+                    attempts--; // Уменьшаем количество оставшихся попыток
+                }
             }
             else
             {
-                Console.WriteLine("Неверно. Попробуйте снова.");
-                attempts--; // Уменьшаем количество оставшихся попыток
+                Console.WriteLine("Ошибка: Введено некорректное значение. Пожалуйста, введите целое число.");
             }
         }
 
